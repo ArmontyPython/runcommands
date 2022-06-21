@@ -19,9 +19,15 @@ alias ta="tmux attach"
 alias tls="tmux list-sessions"
 
 ## TMUX ALIASES (inside session) ##
-alias tcterm="tmux select-pane -P 'fg=green,bg=black,'"
-alias tcman="tmux select-pane -P 'fg=black,bg=white,'"
+function tcolor(){
+	tmux select-pane -P "fg=$1,bg=$2"
+}
+alias tcterm="tcolor green black" 
+alias tcman="tcolor black white"
+alias tcpink="tcolor pink black"
 alias tcdef="tmux select-pane -P 'fg=entering_invalid_color_resets_to_default'"
+
+
 
 ## GIT ALIASES ##
 alias gad="git add ."
