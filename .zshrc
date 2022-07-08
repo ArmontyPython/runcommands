@@ -44,3 +44,13 @@ alias gadcom="gad; git commit -m"
 alias fvim='vim $(fzf)'
 alias f2vim='vim $(fzf) -O $(fzf)'
 alias fzvim=fvim
+
+## Python Aliases ##
+function pyimport(){
+	python3 -i -c "from $1 import *"
+}
+alias pimport='pyimport'
+alias pumpy='python3 -i -c "import numpy as np"'
+alias pynp=pumpy
+alias check_duplicates='python3 /Users/armon.naddaf/Utils/check_for_duplicates.py'
+alias find_duplicates='check_duplicates'
