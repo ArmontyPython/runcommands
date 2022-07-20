@@ -5,17 +5,21 @@ alias vim=nvim
 source ~/.oh_my_zshrc
 
 ## GENERAL ALIASES ##
+source ~/venvs/cpu_venv/bin/activate
 alias ll='ls -al'
 alias q="exit"
 alias szc="source ~/.zshrc"
 alias sbc="szc"
-alias add_alias="vim ~/.zshrc;sbc;"
+alias add_alias="nvim ~/.zshrc;sbc;"
 alias def_alias='cat ~/.zshrc | grep'
 alias list_aliases='cat ~/runcommands/.zshrc | grep -o "^alias\ [^\ ]*=" | sed "s/alias\\(.*\)=/\1/" '
 alias lorep='cd ~/local_repos'
 alias prettyjson='python3 -m json.tool'
 alias ogvim='/usr/bin/vim'
 alias ovim='ogvim'
+alias chrome='open -a "Google Chrome"'
+alias firefox='open -a "Firefox"'
+alias safari='open -a "Safari"'
 
 ## SCREEN ALIASES ##
 alias sS="screen -S"
@@ -24,6 +28,7 @@ alias sr="screen -r"
 
 ## TMUX ALIASES (outside session) ##
 alias ta="tmux attach"
+alias tat="ta -t"
 alias tls="tmux list-sessions"
 
 ## TMUX ALIASES (inside session) ##

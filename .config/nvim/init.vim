@@ -17,13 +17,37 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'EdenEast/nightfox.nvim'
 
 
 " Initialize plugin system
 call plug#end()
 
+colorscheme duskfox
+
 lua require('init')
 
+""" Telescope stuff"""
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+""" COC stuff"""
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 nmap <silent> gd <Plug>(coc-definition)
+nnoremap <silent> K :call ShowDocumentation()<CR>
 
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
+
+
+nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>gn <Plug>(coc-diagnostic-next)
