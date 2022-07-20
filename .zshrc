@@ -20,6 +20,11 @@ alias ovim='ogvim'
 alias chrome='open -a "Google Chrome"'
 alias firefox='open -a "Firefox"'
 alias safari='open -a "Safari"'
+function refacdir(){
+	dirnames=`ls | grep -o "$1" | sort --unique`
+	echo $dirnames | xargs mkdir
+	echo $dirnames | xargs -I _ /bin/sh -c "mv *_* _"
+}
 
 ## SCREEN ALIASES ##
 alias sS="screen -S"
