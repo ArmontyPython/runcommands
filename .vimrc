@@ -11,3 +11,4 @@ hi Pmenu ctermbg=grey ctermfg=black
 " abreviations
 ab ifname if __name__ == "__main__":
 ab implot from matplotlib import pyplot as plt
+
