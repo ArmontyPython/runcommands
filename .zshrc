@@ -5,6 +5,10 @@ alias vim=nvim
 source ~/.oh_my_zshrc
 
 ## GENERAL ALIASES ##
+alias ogres="echo 'are like onions'"
+alias findf="find . -type f"
+alias fif="findf"
+alias fig="findf | grep"
 source ~/venvs/cpu_venv/bin/activate
 alias ll='ls -al'
 alias q="exit"
@@ -31,12 +35,15 @@ alias sls="screen -ls"
 alias sr="screen -r"
 
 ## TMUX ALIASES (outside session) ##
+alias twork="tmux new-session -P -s work -n Notes 'cd ~/Notes; ~/runcommands/scripts/tmux_startup.sh; zsh'"
 alias termux="tmux -CC"
 alias ta="tmux attach"
 alias tat="ta -t"
 alias tls="tmux list-sessions"
 
 ## TMUX ALIASES (inside session) ##
+alias tnotes="tmux new-window -n notes -c ~/Notes 'zsh'"
+alias tpcm="tmux new-window -n pcm -c ~/local_repos/cpu/scripts/pcm 'zsh'"
 function tcolor(){
 	tmux select-pane -P "fg=$1,bg=$2"
 }
@@ -46,6 +53,8 @@ alias tcpink="tcolor pink black"
 alias tcdef="tmux select-pane -P 'fg=entering_invalid_color_resets_to_default'"
 alias tripane="tmux split-window -h; tmux split-window"
 
+## GIT CONFIG ##
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ## GIT ALIASES ##
 alias gad="git add ."
 alias gadcom="gad; git commit -m"
