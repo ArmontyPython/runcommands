@@ -3,6 +3,8 @@
     "coc-css": ">=1.3.0",
     "coc-emmet": ">=1.1.6",
     "coc-html": ">=1.6.1",
-    "coc-pyright": ">=1.1.255"
+    "coc-json": ">=1.6.1",
+    "coc-pyright": ">=1.1.255",
+    "coc-rome": ">=0.3.0"
   }
 }
