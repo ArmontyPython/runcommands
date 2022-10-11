@@ -9,8 +9,11 @@ alias ogres="echo 'are like onions'"
 alias findf="find . -type f"
 alias fif="findf"
 alias fig="findf | grep"
-source ~/venvs/cpu_venv/bin/activate
+export DEFAULT_VENV='/Users/armon.naddaf/venvs/cpu_venv'
+source $DEFAULT_VENV'/bin/activate'
 alias ll='ls -al'
+alias sl='ls'
+alias l1='ls -1'
 alias q="exit"
 alias szc="source ~/.zshrc"
 alias sbc="szc"
@@ -69,6 +72,7 @@ alias npy=pumpy
 alias np3=pumpy
 alias check_duplicates='python3 /Users/armon.naddaf/Utils/check_for_duplicates.py'
 alias find_duplicates='check_duplicates'
+alias pyrightconfig='cp ~/local_repos/cpu/pyrightconfig.json .'
 
 ### VIM ALIASES ###
 alias nvimdiff="nvim -d"
