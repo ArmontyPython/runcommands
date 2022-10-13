@@ -1,3 +1,7 @@
+### PYENV STUFF ###
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+
 ## OVERWRITES (these have to go first) ##
 alias vim=nvim
 
@@ -9,8 +13,8 @@ alias ogres="echo 'are like onions'"
 alias findf="find . -type f"
 alias fif="findf"
 alias fig="findf | grep"
-export DEFAULT_VENV='/Users/armon.naddaf/venvs/cpu_venv'
-source $DEFAULT_VENV'/bin/activate'
+export DEFAULT_VENV='/Users/armon.naddaf/venvs/anglerfish'
+source $DEFAULT_VENV'/bin/activate' 
 alias ll='ls -al'
 alias sl='ls'
 alias l1='ls -1'
@@ -82,3 +86,18 @@ alias fvim='vim $(fzf)'
 alias f2vim='vim $(fzf) -O $(fzf)'
 alias fzvim=fvim
 alias add_alias='nvim ~/.zshrc;sbc;'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

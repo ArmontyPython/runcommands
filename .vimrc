@@ -18,5 +18,4 @@ ab implot from matplotlib import pyplot as plt
 ab impy import numpy as np
 ab figax fig, ax = plt.subplots()<cr>ax.plot(x, y, '-')<cr>ax.set_xlabel('xlabel')<cr>ax.set_ylabel('ylabel')<cr>ax.set_title('ax_title')
 ab pdbst pdb.set_trace()
-
-
+ab abc abcdefghijklmnopqrstuvwxyz
