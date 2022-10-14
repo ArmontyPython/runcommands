@@ -1,5 +1,17 @@
 import pdb
 
+def snake_case(word_components):
+    """
+    >>> snake_case(['apple', 'pie']) 
+    'apple_pie'
+    >>> snake_case(['APPLE', 'PIE'])
+    'apple_pie'
+    >>> snake_case(['crAzy', 'chEEse'])
+    'crazy_cheese'
+    """
+    lower_words = [word_component.lower() for word_component in word_components]
+    return '_'.join(lower_words)
+
 def camelCase(word_components):
     """
     >>> camelCase(['apple', 'pie']) 
@@ -38,7 +50,7 @@ def setCase(originalWord,desired_case='camel'):
     Switches between camelCase, PascalCase, and snake_case.
     kebab-case is technically supported, but doesn't work with the vim keybinding
     because a vim word doesn't include '-' characters/
-    >>> case('apple-pie_andCheese', 'camel')
+    >>> setCase('apple-pie_andCheese', 'camel')
     'applePieAndCheese'
     """
     word = originalWord.replace('-','_')
@@ -49,6 +61,8 @@ def setCase(originalWord,desired_case='camel'):
         all_word_components.extend(word_components)
     if desired_case.lower() == 'camel':
         return camelCase(all_word_components)
+    elif desired_case.lower() == 'snake':
+        return snake_case(all_word_components)
     else:
         return originalWord #gotta add compatibility later
 
