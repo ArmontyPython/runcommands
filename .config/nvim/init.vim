@@ -31,16 +31,20 @@ colorscheme duskfox
 lua require('init')
 
 """ Telescope stuff"""
+nnoremap <leader>FF <cmd>tabnew<cr><cmd>Telescope find_files<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>bt <cmd>Telescope buffers<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 """ COC stuff"""
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+"go to definition
 nmap <silent> gd <Plug>(coc-definition)
+"go to definition in new tab
+nnoremap gD <c-w>s<Plug>(coc-definition)<c-w>T
 nnoremap <silent> K :call ShowDocumentation()<CR>
 
 function! ShowDocumentation()
