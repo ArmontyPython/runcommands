@@ -78,3 +78,7 @@ alias fvim='vim $(fzf)'
 alias f2vim='vim $(fzf) -O $(fzf)'
 alias fzvim=fvim
 alias add_alias='nvim ~/.zshrc;sbc;'
+
+## Install Ruby gems to ~/gems #
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"

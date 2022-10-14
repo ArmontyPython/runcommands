@@ -4,6 +4,8 @@ set runtimepath^=~0/.vim runtimepath+=~/.vim/after
     let &packpath = &runtimepath
     source ~/.vimrc
 
+
+let g:coc_node_path = '/snap/node/current/bin/node'
 call plug#begin('~/.config/nvim/autoload')
 " The default plugin directory will be as follows:
 "   - Vim (Linux/macOS): '~/.vim/plugged'

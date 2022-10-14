@@ -1,0 +1,4 @@
+{
+	"npm.binPath":"/snap/bin/npm",
+	"node.binPath":"/snap/bin/node"
+}
