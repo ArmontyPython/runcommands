@@ -16,6 +16,8 @@ call plug#begin('~/.config/nvim/autoload')
 "   - Avoid using standard Vim directory names like 'plugin'
 " Make sure you use single quotes
 
+Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
+Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'neovim/nvim-lspconfig'

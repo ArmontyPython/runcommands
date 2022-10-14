@@ -1,4 +1,5 @@
 {
 	"npm.binPath":"/snap/bin/npm",
-	"node.binPath":"/snap/bin/node"
+	"node.binPath":"/snap/bin/node",
+	"emmet.includeLanguages": {"jinja2":"html"}
 }
