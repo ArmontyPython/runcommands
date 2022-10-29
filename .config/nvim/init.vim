@@ -23,6 +23,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'EdenEast/nightfox.nvim'
+Plug 'phaazon/hop.nvim'
 
 
 " Initialize plugin system
@@ -31,6 +32,9 @@ call plug#end()
 colorscheme duskfox
 
 lua require('init')
+
+""" Hop stuff """
+noremap F <cmd>:HopWord<cr>
 
 """ Telescope stuff"""
 nnoremap <leader>ff <cmd>Telescope find_files hidden=true<cr>
@@ -60,3 +64,5 @@ endfunction
 
 nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>gn <Plug>(coc-diagnostic-next)
+
+

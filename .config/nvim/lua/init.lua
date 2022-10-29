@@ -29,3 +29,6 @@ require("nvim-tree").setup()
 --    dotfiles = true,
 --  },
 --})
+--
+---- HOP stuff:
+require("hop").setup()
